@@ -21,6 +21,9 @@ div.dataTables_wrapper .dt-button-collection {
 // avoid dropdown to overlap the trigger button
 .dt-button-collection {
   margin-top: 0.2rem;
+  &.dropdown-menu {
+    z-index: 9;
+  }
 }
 div.dropdown-menu.dt-button-collection,
 div.dt-button-collection .dt-button:not(.dt-btn-split-drop) {

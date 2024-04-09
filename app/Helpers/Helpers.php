@@ -102,12 +102,10 @@ class Helpers
         $styleVal = $_COOKIE['mode'];
       }
     }
-    isset($_COOKIE['theme']) ? $themeVal = $_COOKIE['theme'] : $themeVal = $data['myTheme'];
     //layout classes
     $layoutClasses = [
       'layout' => $data['myLayout'],
-      'theme' => $themeVal,
-      'themeOpt' => $data['myTheme'],
+      'theme' => $data['myTheme'],
       'style' => $styleVal,
       'styleOpt' => $data['myStyle'],
       'rtlSupport' => $data['myRTLSupport'],

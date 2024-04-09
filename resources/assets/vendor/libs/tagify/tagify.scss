@@ -64,9 +64,6 @@ $tag-bg: rgb(light.$text-light, 0.5) !default;
       }
     }
   }
-  &__dropdown {
-    transform: translateY(0);
-  }
   &[readonly]:not(.tagify--mix) .tagify__tag > div {
     padding: 0 $tag-spacer 0 $tag-spacer !important;
   }
@@ -133,7 +130,6 @@ $tag-bg: rgb(light.$text-light, 0.5) !default;
       }
       &__dropdown {
         box-shadow: light.$dropdown-box-shadow;
-        border-top-color: light.$dropdown-border-color;
         &[placement='top'] {
           box-shadow: 0 -0.2rem 1.25rem rgba(light.rgba-to-hex(light.$gray-500, light.$rgba-to-hex-bg), 0.4) !important;
         }
@@ -199,7 +195,6 @@ $tag-bg: rgb(light.$text-light, 0.5) !default;
       }
       &__dropdown {
         box-shadow: dark.$dropdown-box-shadow;
-        border-top-color: dark.$dropdown-border-color;
         &[placement='top'] {
           box-shadow: 0 -0.2rem 1.25rem rgba(15, 20, 34, 0.55) !important;
         }

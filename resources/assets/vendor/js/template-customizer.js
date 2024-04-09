@@ -190,7 +190,6 @@ class TemplateCustomizer {
     this.settings.theme = theme
     if (updateStorage) this._setSetting('Theme', themeName)
 
-    this._setCookie('theme', themeName, 365)
     const themeUrl = this.pathResolver(
       this.settings.themesPath +
         this.settings.cssFilenamePattern.replace(
@@ -504,11 +503,7 @@ class TemplateCustomizer {
     this.settings.layoutNavbarOptions = navType
     this.settings.layoutFooterFixed = fixedFooter !== '' ? fixedFooter === 'true' : this.settings.defaultFooterFixed
 
-    if (this._checkCookie('theme')) {
-      this.settings.theme = this._getThemeByName(this._getCookie('theme'), true)
-    } else {
-      this.settings.theme = this._getThemeByName(this._getSetting('Theme'), true)
-    }
+    this.settings.theme = this._getThemeByName(this._getSetting('Theme'), true)
 
     // Filter options depending on available controls
     if (!this._hasControls('rtl')) this.settings.rtl = document.documentElement.getAttribute('dir') === 'rtl'
@@ -531,8 +526,8 @@ class TemplateCustomizer {
         <label class="form-check-label custom-option-content p-0" for="${inputName}${nameVal}">
           <span class="custom-option-body mb-0">
             <img src="${assetsPath}img/customizer/${image}${
-              isDarkStyle ? '-dark' : ''
-            }.svg" alt="${title}" class="img-fluid scaleX-n1-rtl" />
+        isDarkStyle ? '-dark' : ''
+      }.svg" alt="${title}" class="img-fluid scaleX-n1-rtl" />
           </span>
           <input
             name="${inputName}"
@@ -579,7 +574,6 @@ class TemplateCustomizer {
       window.location.reload()
       this._deleteCookie('mode')
       this._deleteCookie('colorPref')
-      this._deleteCookie('theme')
     }
     resetBtn.addEventListener('click', resetBtnCb)
     this._listeners.push([resetBtn, 'click', resetBtnCb])
@@ -689,7 +683,7 @@ class TemplateCustomizer {
           .setAttribute('checked', 'checked')
 
         const rtlCb = e => {
-          this._loadingState(true)
+          this._loadingState(true);
           this.setRtl(e.target.value === 'rtl', true, () => {
             this._loadingState(false)
           })
@@ -1004,7 +998,7 @@ class TemplateCustomizer {
     const count = paths.length
     let loaded = 0
 
-    function loadStylesheet(path, curLink, _cb = () => {}) {
+    function loadStylesheet(path, curLink, _cb) {
       const link = document.createElement('link')
 
       link.setAttribute('href', path)
@@ -1036,7 +1030,8 @@ class TemplateCustomizer {
           // Catch error
         }
       }, 10)
-      curLink.setAttribute('href', link.href)
+
+      curLink.parentNode.insertBefore(link, curLink.nextSibling)
     }
 
     function stylesheetCallBack() {

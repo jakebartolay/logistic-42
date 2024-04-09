@@ -2,36 +2,33 @@
   "menu": [
     {
       "url": "/",
-      "name": "Home",
+      "name": "Dashboard",
       "icon": "menu-icon tf-icons ti ti-smart-home",
-      "slug": "pages-home"
+      "slug": "dashboard"
     },
     {
-      "url": "page-2",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Page 2",
-      "slug": "pages-page-2"
+      "url": "map",
+      "name": "Map",
+      "icon": "menu-icon tf-icons ti ti-map-2",
+      "slug": "map"
     },
     {
-      "url": "pages/misc-error",
-      "name": "Error",
-      "icon": "menu-icon tf-icons ti ti-alert-triangle",
-      "slug": "pages-misc-error",
-      "target": "_blank"
+      "url": "assignments",
+      "icon": "menu-icon tf-icons ti ti-checkup-list",
+      "name": "Assignments",
+      "slug": "assignments"
     },
     {
-      "url": "auth/login-basic",
-      "name": "Login",
-      "icon": "menu-icon tf-icons ti ti-login",
-      "slug": "auth-login-basic",
-      "target": "_blank"
+      "url": "driver-report",
+      "name": "Report",
+      "icon": "menu-icon tf-icons ti ti-message-report",
+      "slug": "report"
     },
     {
-      "url": "auth/register-basic",
-      "name": "Register",
-      "icon": "menu-icon tf-icons ti ti-user",
-      "slug": "auth-register-basic",
-      "target": "_blank"
+      "url": "faq",
+      "name": "Faq",
+      "icon": "menu-icon tf-icons ti ti-message-report",
+      "slug": "faq"
     }
   ]
 }

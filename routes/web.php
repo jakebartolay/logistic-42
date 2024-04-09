@@ -1,27 +1,31 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\language\LanguageController;
+use App\Http\Controllers\pages\WarehouseController;
 
-use App\Http\Controllers\TemplateController;
+    /*
+    |--------------------------------------------------------------------------
+    | Web Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register web routes for your application. These
+    | routes are loaded by the RouteServiceProvider and all of them will
+    | be assigned to the "web" middleware group. Make something great!
+    |
+    */
 
-Route::get('/', [TemplateController::class, 'index']);
+    Route::get('/', [WarehouseController::class, 'dashboard'])->name('dashboard');
 
-/*FOR ORDERS TABLE*/
-Route::get('/page2', [TemplateController::class, 'order']);
+    Route::get('admin/order', [WarehouseController::class, 'order'])->name('order');
 
-/*FOR INBOUND TABLE*/
-Route::get('/page3', [TemplateController::class, 'inbound']);
-Route::post('/markProductReceived', [TemplateController::class, 'markProductReceived'])->name('markProductReceived');
+    Route::get('admin/inventory', [WarehouseController::class, 'inventory'])->name('inventory');
 
-/*FOR OUTBOUND TABLE*/
-Route::get('/page4', [TemplateController::class, 'outbound']);
+    Route::get('admin/inbound', [WarehouseController::class, 'inbound'])->name('inbound');
 
-Route::get('/invoice', [TemplateController::class, 'invoice']);
+    Route::get('admin/outbound', [WarehouseController::class, 'outbound'])->name('outbound');
 
-Route::post('/markProductShipped', [TemplateController::class, 'markProductShipped'])->name('markProductShipped');
+    Route::get('admin/invoice', [WarehouseController::class, 'invoice'])->name('invoice');
 
-/*FOR INVOICE*/
-Route::get('/get-outbound-data/{orderId}', [TemplateController::class, 'getOutboundData'])->name('get.outbound.data');
-// Route for displaying the invoice
-Route::get('/invoice', [TemplateController::class, 'showInvoice'])->name('invoice');
-Route::get('/invoicePrint', [TemplateController::class, 'printInvoice'])->name('invoicePrint');
+    Route::get('admin/report', [WarehouseController::class, 'report'])->name('report');
+

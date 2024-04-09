@@ -277,7 +277,7 @@ $bs-stepper-vertical-header-min-width: 18rem !default;
 
   // ! FIX: Vertical border issue in rtl and ltr
   @include app-rtl(false) {
-    .light-style {
+    &.light-style {
       .bs-stepper {
         &.vertical {
           .bs-stepper-header {
@@ -288,7 +288,7 @@ $bs-stepper-vertical-header-min-width: 18rem !default;
     }
   }
   @include app-ltr(false) {
-    .light-style {
+    &.light-style {
       .bs-stepper {
         &.vertical {
           .bs-stepper-header {
@@ -388,7 +388,7 @@ $bs-stepper-vertical-header-min-width: 18rem !default;
 
   // ! FIX: Vertical border issue in rtl and ltr
   @include app-rtl(false) {
-    .dark-style {
+    &.dark-style {
       .bs-stepper {
         &.vertical {
           .bs-stepper-header {
@@ -399,7 +399,7 @@ $bs-stepper-vertical-header-min-width: 18rem !default;
     }
   }
   @include app-ltr(false) {
-    .dark-style {
+    &.dark-style {
       .bs-stepper {
         &.vertical {
           .bs-stepper-header {

@@ -2,36 +2,45 @@
   "menu": [
     {
       "url": "/",
-      "name": "Home",
-      "icon": "menu-icon tf-icons ti ti-smart-home",
-      "slug": "pages-home"
+      "icon": "menu-icon tf-icons ti ti-dashboard",
+      "name": "Dashboard",
+      "slug": "dashboard"
     },
     {
-      "url": "page-2",
-      "icon": "menu-icon tf-icons ti ti-file",
-      "name": "Page 2",
-      "slug": "pages-page-2"
+      "url": "admin/order",
+      "icon": "menu-icon ti ti-loader ti-spin",
+      "name": "ORDERS",
+      "slug": "order"
     },
     {
-      "url": "pages/misc-error",
-      "name": "Error",
-      "icon": "menu-icon tf-icons ti ti-alert-triangle",
-      "slug": "pages-misc-error",
-      "target": "_blank"
+      "url": "admin/inventory",
+      "icon": "menu-icon ti ti-folder",
+      "name": "Inventory",
+      "slug": "inventory"
     },
     {
-      "url": "auth/login-basic",
-      "name": "Login",
-      "icon": "menu-icon tf-icons ti ti-login",
-      "slug": "auth-login-basic",
-      "target": "_blank"
+      "url": "admin/inbound",
+      "icon": "menu-icon ti ti-arrow-big-right ti-fade-right",
+      "name": "Inbound",
+      "slug": "inbound"
     },
     {
-      "url": "auth/register-basic",
-      "name": "Register",
-      "icon": "menu-icon tf-icons ti ti-user",
-      "slug": "auth-register-basic",
-      "target": "_blank"
+      "url": "admin/outbound",
+      "icon": "menu-icon tf-icons ti ti-arrow-big-left ti-fade-left",
+      "name": "Outbound",
+      "slug": "outbound"
+    },
+    {
+      "url": "admin/invoice",
+      "icon": "menu-icon tf-icons ti ti-receipt",
+      "name": "Invoice",
+      "slug": "invoice"
+    },
+    {
+      "url": "admin/report",
+      "icon": "menu-icon ti ti-report-analytics",
+      "name": "Reports",
+      "slug": "report"
     }
   ]
 }
